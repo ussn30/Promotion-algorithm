@@ -11,6 +11,7 @@ namespace ConsoleApp2
             int counterofA = 0;
             int counterofB = 0;
             int CounterofC = 0;
+
             int CounterofD = 0;
 
             foreach (var pr in products)
