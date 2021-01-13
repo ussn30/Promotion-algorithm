@@ -9,6 +9,7 @@ namespace ConsoleApp2
         {
             List<string> proList = new List<string>();
             Console.WriteLine("Order Value");
+            // this part we can use dependenct injection 
             ProductService productService = new ProductService();
             int a = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < a; i++)

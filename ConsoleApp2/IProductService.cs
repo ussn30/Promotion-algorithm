@@ -4,9 +4,8 @@ using System.Text;
 
 namespace ConsoleApp2
 {
-    public interface  IProductService
+    public interface IProductService
     {
-       
         int GetTotalPrice(List<string> products);
     }
 }

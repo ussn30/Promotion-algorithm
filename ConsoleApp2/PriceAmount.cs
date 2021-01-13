@@ -5,8 +5,10 @@ using System.Text;
 
 namespace ConsoleApp2
 {
+    // open and closed principle
     public class BaseAmount
     {
+        
         public virtual int GetPriceAmount()
         {
             // as of now 0 later we can chnage any amount

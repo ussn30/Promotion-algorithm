@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ConsoleApp2
 {
+    // open and closed principle
     public class BaseCalc
     {
         public virtual int GetBaseCalc(int value, int amount)

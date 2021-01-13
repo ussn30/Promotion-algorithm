@@ -4,36 +4,35 @@ using System.Text;
 
 namespace ConsoleApp2
 {
+    // interface segartion
     public class ProductService : IProductService
     {
-        public int GetTotalPrice(List<string> products)
+        public int GetTotalPrice(List<string> items)
         {
-            int counterofA = 0;
-            int counterofB = 0;
-            int CounterofC = 0;
-
-            int CounterofD = 0;
-
-            foreach (var pr in products)
+            int ACount = 0;
+            int BCount = 0;
+            int CCount = 0;
+            int DCount = 0;
+            foreach (var it in items)
             {
-                if (pr == "A" || pr == "a")
+                if (it == "A" || it == "a")
                 {
-                    counterofA = counterofA + 1;
+                    ACount = ACount + 1;
                 }
-                if (pr == "B" || pr == "b")
+                if (it == "B" || it == "b")
                 {
-                    counterofB = counterofB + 1;
+                    BCount = BCount + 1;
                 }
-                if (pr == "C" || pr == "c")
+                if (it == "C" || it == "c")
                 {
-                    CounterofC = CounterofC + 1;
+                    CCount = CCount + 1;
                 }
-                if (pr == "D" || pr == "d")
+                if (it == "D" || it == "d")
                 {
-                    CounterofD = CounterofD + 1;
+                    DCount = DCount + 1;
                 }
             }
-            
+            /// 
 
             BaseAmount scenarioA = new ScenarioA();
             BaseAmount scenarioB = new ScenarioB();
@@ -44,11 +43,11 @@ namespace ConsoleApp2
             BaseCalc scenarioBCalc = new ScenarioACalc();
             BaseCalc baseCalc = new BaseCalc();
 
-            int totalPriceofA = scenarioACalc.GetBaseCalc(counterofA, scenarioA.GetPriceAmount());
-            int totalPriceofB = scenarioBCalc.GetBaseCalc(counterofB, scenarioB.GetPriceAmount());
-            int totalPriceofC = baseCalc.GetBaseCalc(CounterofC, scenarioC.GetPriceAmount());
-            int totalPriceofD = baseCalc.GetBaseCalc(CounterofD, scenarioD.GetPriceAmount());
-            return totalPriceofA + totalPriceofB + totalPriceofC + totalPriceofD;
+            int totalofA = scenarioACalc.GetBaseCalc(ACount, scenarioA.GetPriceAmount());
+            int totalofB = scenarioBCalc.GetBaseCalc(BCount, scenarioB.GetPriceAmount());
+            int totalofC = baseCalc.GetBaseCalc(CCount, scenarioC.GetPriceAmount());
+            int totalofD = baseCalc.GetBaseCalc(DCount, scenarioD.GetPriceAmount());
+            return totalofA + totalofB + totalofC + totalofD;
 
         }
     }
